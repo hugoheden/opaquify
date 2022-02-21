@@ -15,13 +15,16 @@ public class Example1 {
     static void example1() {
         Opaquifyer opaquifyer = new Opaquifyer(); // <1>
         String opaquified = opaquifyer.opaquify("Opaquify me!"); // <2>
-        System.out.println(opaquified); // mek7mop9k49kv9njd5manbsugw <3>
+        System.out.println(opaquified); // "mek7mop9k49kv9njd5manbsugw" <3>
+        // ... <4>
+        String deopaquified = opaquifyer.deopaquify(opaquified); // <5>
+        System.out.println(deopaquified); // "Opaquify me!" <6>
     }
 
     static void example2() {
         Opaquifyer opaquifyer = new Opaquifyer("My project rocks!".getBytes(UTF_8)); // <1>
         String opaquified = opaquifyer.opaquify("Opaquify me!"); // <2>
-        System.out.println(opaquified); // mek7mop9k49kv9njd5manbsugw <3>
+        System.out.println(opaquified); // "mek7mop9k49kv9njd5manbsugw" <3>
     }
 
     static void comparisonWithBase64_adoc() {
