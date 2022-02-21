@@ -6,7 +6,7 @@
 
   <groupId>whatever.heden.hugo.opaquify</groupId>
   <artifactId>opaquify</artifactId>
-  <version>0.8</version>
+  <version>0.9-SNAPSHOT</version>
   <name>opaquify</name>
 
   <properties>
