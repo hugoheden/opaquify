@@ -81,6 +81,8 @@ public class Opaquifyer {
         // we make sure to prepend a _positive_ byte.
         b = prependPositiveByte(b);
         BigInteger bigInteger = new BigInteger(b);
+        // Note: BigInteger#toString(radix) is unfortunately limited to max 36, which thus becomes our alphabet size.
+        // Would have preferred 62. (But that would require more custom code? Which we don't want).
         return bigInteger.toString(36);
     }
 
