@@ -18,6 +18,10 @@ public class Opaquifyer {
     private final Cipher forward;
     private final Cipher backward;
 
+    public Opaquifyer() {
+        this("".getBytes(StandardCharsets.UTF_8));
+    }
+
     public Opaquifyer(byte[] uniquifier) {
         uniquifier = Util.expandToLength32(uniquifier);
         // Note: Even though we are using JDK:s encryption libraries, we are using in it in a very unsafe way.
